@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <style>
+    body {
+        margin: 0;
+        font: 20px sans-serif;
+    }
+    /*.wrapper {*/
+    /*    height: 100vh;*/
+    /*    width: 600px;*/
+    /*    margin: auto;*/
+    /*}*/
+    h1 {
+        text-align: center;
+        margin-top: 0;
+    }
+    p {
+        text-align: justify;
+        text-indent: 30px;
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+    .switch {
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+        font-size: 0;
+    }
+    .theme {
+        display: none;
+    }
+    .theme:checked+.switch {
+        color: deepskyblue;
+    }
+    .switch::before {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 8px;
+        background: silver;
+        position: absolute;
+        top: 8px;
+        left: -35px;
+    }
+    .switch::after{
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        position: absolute;
+        top: 4px;
+        left: -37px;
+        background: #c4ffda;
+        border: 1px solid silver;
+        box-sizing: border-box;
+        transition: left 1s;
+    }
+    .theme:checked+.switch::after {
+        left: -19px;
+    }
+    .site {
+        color: #222;
+        padding: 50px calc(50% - 300px) 100px;
+        height: 100vh;
+        box-sizing: border-box;
+        transition-property: color, background;
+        transition-duration: 1s;
+    }
+    .theme:checked~.site {
+        color: #fff;
+        background: #222;
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card {
+        width: 30%;
+        height: 150px;
+        border: 1px solid;
+        border-radius: 4px;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        transition-property: transform, box-shadow;
+        transition-duration: 2s;
+        transition-delay: 1s;
+    }
+    .card::before {
+        content: attr(data-text);
+        width: 100%;
+        height: 100%;
+        background: silver;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 1500ms;
+    }
+    .card:hover::before {
+        opacity: 0;
+    }
+    .card:hover {
+        transform: scale(1.1, 1.1);
+        box-shadow: 0 0 10px 2px #2222;
+    }
+    .theme:checked~.site .card::before {
+        background: #222;
+    }
+    .theme:checked~.site .card:hover {
+        box-shadow: 0 0 10px 2px #fff4;
+    }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <input type="checkbox" class="theme" id="check"><label for="check" class="switch">Поменять тему</label>
+    <div class="site">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam deserunt eos ex magni, non
+            perferendis porro repellendus. Animi deleniti deserunt enim eveniet illo illum iure minima necessitatibus
+            quam vitae.</p>
+        <p>Accusamus aliquam assumenda commodi consequatur debitis doloribus eveniet facere illo ipsa maiores maxime
+            minus neque nesciunt, nostrum omnis perferendis quasi, qui quidem repellat sint sit, tempore veritatis.
+            Architecto, omnis sequi?</p>
+        <div class="cards">
+            <div class="card" data-text="bacterium"><i class="fas fa-bacterium fa-3x"></i></div>
+            <div class="card" data-text="bahai"><i class="fas fa-bahai fa-3x"></i></div>
+            <div class="card" data-text="bug"><i class="fas fa-bug fa-3x"></i></div>
+        </div>
+        <p>Ab, accusamus atque corporis, deserunt dignissimos dolore error expedita explicabo fugiat magni natus non
+            officiis porro quaerat quasi quidem repellat sequi similique totam, velit? Autem ea nulla odit quidem
+            rem?</p>
+        <p>Adipisci aliquam assumenda dolorem eius, eligendi impedit quae quos repellendus saepe veniam! At consectetur
+            cumque dignissimos dolorum eos officiis repellat rerum soluta tenetur voluptatum! Eaque magnam quaerat
+            soluta temporibus ut.</p>
+        <p>Aliquid aperiam beatae blanditiis consequatur cum, debitis dolor doloremque ea esse excepturi expedita fuga
+            id incidunt itaque nisi officia quasi qui quidem, quo repellat sint soluta sunt velit, voluptas
+            voluptatum?</p>
+    </div>
+</div>
+</body>
+</html>

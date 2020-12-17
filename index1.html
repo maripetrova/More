@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+        }
+        .container {
+            width: 1000px;
+            margin: auto;
+            height: inherit;
+            display: flex;
+            background-color: lavender;
+            flex-flow: row wrap;
+            align-items: center;
+            padding-right: calc(334px / 8);
+            padding-left: calc(334px / 8);
+            box-sizing: border-box;
+            justify-content: space-around;
+            padding-top: calc((100vh - 666px) / 8);
+            padding-bottom: calc((100vh - 666px) / 8);
+        }
+        .card {
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            text-align: center;
+            font-family: sans-serif;
+            border: 1px solid rgb(188, 147, 199);
+            border-radius: 20px;
+            margin-left: calc(334px / 8);
+            margin-right: calc(334px / 8);
+            margin-bottom: calc((100vh - 666px) / 8);
+            margin-top: calc((100vh - 666px) / 8);
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+      <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, hic!</div>
+      <div class="card">Sunt neque consequuntur exercitationem eum quo, officiis fugit animi laboriosam?</div>
+      <div class="card">Perferendis assumenda sapiente maxime beatae itaque ratione repellendus recusandae alias!</div>
+      <div class="card">Non laboriosam quasi molestiae asperiores magnam sint voluptatem. Error, repellat.</div>
+      <div class="card">In labore nemo expedita eius nobis, neque voluptates soluta molestias.</div>
+      <div class="card">Quam magnam incidunt quia rerum commodi officia nostrum et est.</div>
+      <div class="card">Illo corrupti, temporibus quis tempora laudantium optio ducimus rerum molestiae.</div>
+      <div class="card">Ducimus, id illo quis natus sed soluta magnam assumenda reiciendis!</div>
+      <div class="card">Accusantium quisquam, illo molestias harum fuga consequatur voluptates quasi maxime.</div>
+  </div>
+</body>
+</html>
